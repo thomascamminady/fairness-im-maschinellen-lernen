@@ -15,7 +15,7 @@ body {
 #chart-container {
     width: 50%;
     margin: 0 auto;
-    padding: 0;
+    padding: 10;
     text-align: center;
     background-color: #ffffff;
 
@@ -55,5 +55,17 @@ main section {
 nav ul li a {
     text-decoration: underline;
     text-decoration-color: #6baed6;
+
+}
+
+.vega-bindings {
+    position: absolute;
+    left: 0px;
+    bottom: -30px;
+    display: flex;
+    font-size: 14px;
+    color: gray;
+
+
 
 }
