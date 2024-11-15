@@ -5,18 +5,19 @@
             "fontSize": 14
         },
         "title": {
-            "anchor": "middle",
-            "fontWeight": "normal",
-            "titleFontWeight": "normal",
+            "font": "Arial",
+            "anchor": "start",
+            "titleFontWeight": "bold",
             "labelFontWeight": "normal",
             "fontSize": 30,
             "titleFontSize": 16,
             "labelFontSize": 14,
-            "color": "gray",
-            "titleColor": "gray",
+            "color": "#333",
+            "titleColor": "#333",
             "labelColor": "gray",
             "tickColor": "gray",
-            "domainColor": "gray"
+            "domainColor": "gray",
+            "subtitleColor": "gray"
         },
         "header": {
             "titleFontSize": 22,

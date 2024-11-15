@@ -90,12 +90,12 @@
         </main>
 
         <footer>
-            <p>&copy; 2024 Interactive Data Visualization. All rights reserved.</p>
+            <p>A footer comes here.</p>
         </footer>
     </div>
 
     <script>
-        vegaEmbed("#chart", "vega/chart.json").catch(console.error);
+        vegaEmbed("#chart", "vega/chart.json", { renderer: "svg", actions: false }).catch(console.error);
     </script>
 </body>
 
