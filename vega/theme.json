@@ -1,7 +1,7 @@
 {
     "config": {
         "text": {
-            "color": "gray",
+            "color": "#666",
             "fontSize": 14
         },
         "title": {
@@ -14,17 +14,17 @@
             "labelFontSize": 14,
             "color": "#333",
             "titleColor": "#333",
-            "labelColor": "gray",
-            "tickColor": "gray",
-            "domainColor": "gray",
-            "subtitleColor": "gray"
+            "labelColor": "#666",
+            "tickColor": "#666",
+            "domainColor": "#666",
+            "subtitleColor": "#666"
         },
         "header": {
             "titleFontSize": 22,
             "labelFontSize": 18,
-            "color": "gray",
-            "titleColor": "gray",
-            "labelColor": "gray",
+            "color": "#666",
+            "titleColor": "#666",
+            "labelColor": "#666",
             "fontWeight": "normal",
             "titleFontWeight": "normal",
             "labelFontWeight": "normal"
@@ -37,7 +37,7 @@
         },
         "axis": {
             "domain": true,
-            "domainColor": "gray",
+            "domainColor": "#666",
             "domainWidth": 1,
             "gridWidth": 1,
             "labelAngle": 0,
@@ -53,10 +53,10 @@
             "fontSize": 30,
             "titleFontSize": 16,
             "labelFontSize": 14,
-            "color": "gray",
-            "titleColor": "gray",
-            "labelColor": "gray",
-            "tickColor": "gray"
+            "color": "#666",
+            "titleColor": "#666",
+            "labelColor": "#666",
+            "tickColor": "#666"
         },
         "axisX": {
             "titleAnchor": "end",
@@ -76,11 +76,11 @@
             "fontSize": 30,
             "titleFontSize": 16,
             "labelFontSize": 14,
-            "color": "gray",
-            "titleColor": "gray",
-            "labelColor": "gray",
-            "tickColor": "gray",
-            "domainColor": "gray"
+            "color": "#666",
+            "titleColor": "#666",
+            "labelColor": "#666",
+            "tickColor": "#666",
+            "domainColor": "#666"
         }
     }
 }

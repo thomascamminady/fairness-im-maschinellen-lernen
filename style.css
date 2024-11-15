@@ -69,3 +69,8 @@ nav ul li a {
 
 
 }
+
+/* paragraphs are gray */
+p {
+    color: #666;
+}
