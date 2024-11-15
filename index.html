@@ -5,13 +5,94 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WIP: 2024-11-14</title>
+    <link rel="stylesheet" href="style.css">
     <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
     <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
     <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
 </head>
 
 <body>
-    <div id="chart"></div>
+    <div class="container">
+        <header>
+            <h1>Interactive Data Visualization</h1>
+            <nav>
+                <ul>
+                    <li><a href="#section1">Introduction</a></li>
+                    <li><a href="#chart">Chart</a></li>
+                    <li><a href="#section2">Details</a></li>
+                    <li><a href="#section3">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <section id="section1">
+                <h2>Introduction</h2>
+                <p>
+                    Donec vitae felis id odio viverra scelerisque. Maecenas at augue ullamcorper, dignissim mi sed,
+                    tincidunt quam. Suspendisse vitae elit nec mi luctus dignissim sit amet ut purus. Cras id erat
+                    vitae risus tincidunt ultricies eget vel justo.
+                </p>
+                <p>
+                    Donec vitae felis id odio viverra scelerisque. Maecenas at augue ullamcorper, dignissim mi sed,
+                    tincidunt quam. Suspendisse vitae elit nec mi luctus dignissim sit amet ut purus. Cras id erat
+                    vitae risus tincidunt ultricies eget vel justo.
+                </p>
+                <p>
+                    Donec vitae felis id odio viverra scelerisque. Maecenas at augue ullamcorper, dignissim mi sed,
+                    tincidunt quam. Suspendisse vitae elit nec mi luctus dignissim sit amet ut purus. Cras id erat
+                    vitae risus tincidunt ultricies eget vel justo.
+                </p>
+            </section>
+        </main>
+    </div>
+
+    <div id="chart-container">
+        <section id="chart">
+            <h2>Data Chart</h2>
+            <div id="chart"></div>
+        </section>
+    </div>
+
+    <div class="container">
+        <main>
+            <section id="section2">
+                <h2>Details</h2>
+                <p>
+                    Donec vitae felis id odio viverra scelerisque. Maecenas at augue ullamcorper, dignissim mi sed,
+                    tincidunt quam. Suspendisse vitae elit nec mi luctus dignissim sit amet ut purus. Cras id erat
+                    vitae risus tincidunt ultricies eget vel justo.
+                </p>
+                <p>
+                    Donec vitae felis id odio viverra scelerisque. Maecenas at augue ullamcorper, dignissim mi sed,
+                    tincidunt quam. Suspendisse vitae elit nec mi luctus dignissim sit amet ut purus. Cras id erat
+                    vitae risus tincidunt ultricies eget vel justo.
+                </p>
+                <p>
+                    Donec vitae felis id odio viverra scelerisque. Maecenas at augue ullamcorper, dignissim mi sed,
+                    tincidunt quam. Suspendisse vitae elit nec mi luctus dignissim sit amet ut purus. Cras id erat
+                    vitae risus tincidunt ultricies eget vel justo.
+                </p>
+
+            </section>
+
+            <section id="section3">
+                <h2>Contact</h2>
+                <p>
+                    Nullam non nibh vitae erat vehicula tincidunt in vel nulla. Integer vulputate lorem sed ultricies
+                    fermentum. Phasellus interdum velit ac felis commodo, sit amet iaculis purus fermentum.
+                </p>
+                <address>
+                    Email: <a href="mailto:example@example.com">example@example.com</a><br>
+                    Phone: +123-456-7890
+                </address>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2024 Interactive Data Visualization. All rights reserved.</p>
+        </footer>
+    </div>
 
     <script>
         vegaEmbed("#chart", "vega/chart.json").catch(console.error);
