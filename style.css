@@ -9,7 +9,7 @@ body {
 .container {
     max-width: 50%;
     margin: 0 auto;
-    padding: 10px;
+    padding: 5px;
 }
 
 #chart-container {
@@ -61,16 +61,15 @@ nav ul li a {
 .vega-bindings {
     position: absolute;
     left: 0px;
-    bottom: -30px;
+    /* bottom: -30px; */
+    top: -10px;
     display: flex;
     font-size: 14px;
-    color: gray;
-
-
-
+    color: #666;
 }
 
 /* paragraphs are gray */
 p {
     color: #666;
+    font-size: 14px;
 }

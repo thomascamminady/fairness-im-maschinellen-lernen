@@ -5,7 +5,7 @@
             "fontSize": 14
         },
         "title": {
-            "font": "Arial",
+            "font": "Arial, sans-serif",
             "anchor": "start",
             "titleFontWeight": "bold",
             "labelFontWeight": "normal",
@@ -17,7 +17,8 @@
             "labelColor": "#666",
             "tickColor": "#666",
             "domainColor": "#666",
-            "subtitleColor": "#666"
+            "subtitleColor": "#666",
+            "subtitleFontSize": 14
         },
         "header": {
             "titleFontSize": 22,
