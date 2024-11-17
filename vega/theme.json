@@ -10,7 +10,7 @@
             "titleFontWeight": "bold",
             "labelFontWeight": "normal",
             "fontSize": 30,
-            "titleFontSize": 16,
+            "titleFontSize": 14,
             "labelFontSize": 14,
             "color": "#333",
             "titleColor": "#333",
@@ -21,7 +21,7 @@
             "subtitleFontSize": 14
         },
         "header": {
-            "titleFontSize": 22,
+            "titleFontSize": 18,
             "labelFontSize": 18,
             "color": "#666",
             "titleColor": "#666",
