@@ -79,7 +79,7 @@
 
 
         <section id="user-table">
-            <h2>User Table and Chart</h2>
+            <h2>Wie mache ich ein Histogram</h2>
             <div class="split-container">
                 <!-- Left Half: User Table -->
                 <div class="left-half">
@@ -131,6 +131,87 @@
                 vegaEmbed("#chart-container2", "vega/hist.json", { renderer: "canvas", actions: false }).catch(console.error);
             </script>
         </section>
+
+
+        <section id="user-table">
+            <h2>Wie mache ich ein Histogram</h2>
+            <div class="split-container">
+                <div class="left-half">
+                    <div id="simplehist-containerlarge"></div>
+                </div>
+                <div class="right-half">
+                    <div class="table-container">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th></th>
+                                    <th>Kredit genehmigt</th>
+                                    <th>Kredit abgelehnt</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th>Zahlt zurück</th>
+                                    <td>99</td>
+                                    <td>92</td>
+                                </tr>
+                                <tr>
+                                    <th>Zahlt nicht zurück</th>
+                                    <td>33</td>
+                                    <td>62</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <p>Fülle nun die Tabelle aus.</p>
+
+                    <div class="table-container-profit">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th></th>
+                                    <th>Kredit genehmigt</th>
+                                    <th>Kredit abgelehnt</th>
+                                    <th>Insgesamt</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th>Zahlt zurück</th>
+                                    <td contenteditable="true"></td>
+                                    <td contenteditable="true"></td>
+                                    <td contenteditable="true"></td>
+                                </tr>
+                                <tr>
+                                    <th>Zahlt nicht zurück</th>
+                                    <td contenteditable="true"></td>
+                                    <td contenteditable="true"></td>
+                                    <td contenteditable="true"></td>
+                                </tr>
+                                <tr>
+                                    <th>Insgesamt</th>
+                                    <td contenteditable="true"></td>
+                                    <td contenteditable="true"></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <p>
+                        Die Bank macht wie viel Gewinn?
+                    </p>
+                </div>
+
+
+            </div>
+        </section>
+        <script>
+            // Embed the Vega chart on the right half
+            vegaEmbed("#simplehist-containerlarge", "vega/hist_large_2.json", { renderer: "canvas", actions: false }).catch(console.error);
+        </script>
+
+
+
+
 
 
         <section id="chart">
