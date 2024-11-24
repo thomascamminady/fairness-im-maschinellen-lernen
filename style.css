@@ -6,28 +6,18 @@ body {
     padding: 0;
 }
 
-.container {
-    max-width: 50%;
-    margin: 0 auto;
-    padding: 5px;
+section {
+    max-width: 80%;
+    margin: 20px auto;
+    background-color: #f9f9f9;
+    border: 1px solid red;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: justify;
+    /* Align text content to justify */
 }
 
-#chart-container {
-    width: 50%;
-    margin: 0 auto;
-    padding: 10;
-    text-align: center;
-    background-color: #ffffff;
-
-}
-
-#chart {
-    display: inline-block;
-    width: 100%;
-}
-
-header,
-footer {
+header {
     text-align: center;
     margin-bottom: 10px;
 }
@@ -45,31 +35,129 @@ nav a {
     color: #333;
 }
 
-main section {
-    margin-bottom: 40px;
-    background-color: #ffffff;
-    padding: 20px;
-    border-radius: 8px;
-}
-
 nav ul li a {
     text-decoration: underline;
-    text-decoration-color: #333;
-
+    text-decoration-color: blue;
 }
 
 .vega-bindings {
-    position: absolute;
-    left: 0px;
-    /* bottom: -30px; */
-    top: -10px;
     display: flex;
     font-size: 14px;
     color: #666;
 }
 
-/* paragraphs are gray */
+/* Justify paragraphs */
 p {
     color: #666;
     font-size: 14px;
+    text-align: justify;
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.text {
+    width: 48%;
+    text-align: justify;
+}
+
+.table-container {
+    width: 48%;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 0 auto;
+}
+
+th,
+td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+}
+
+th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+td[contenteditable="true"] {
+    background-color: #fffbe6;
+    /* Light yellow for editable cells */
+    cursor: text;
+}
+
+td[contenteditable="true"]:focus {
+    outline: 2px solid #4caf50;
+    /* Green outline when focused */
+}
+
+/* Ensure the section takes enough space */
+#user-table {
+    height: auto;
+    /* Automatically adjust height to content */
+    padding: 20px;
+    /* Add some padding for better aesthetics */
+    max-width: 80%;
+    /* Ensure it doesn't stretch too wide */
+    margin: 0 auto;
+    /* Center the section horizontally */
+}
+
+/* General container for split layout */
+.split-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    height: 100%;
+}
+
+/* Left half: User Table */
+.left-half {
+    flex: 1;
+    padding: 10px;
+    max-width: 50%;
+    overflow-y: auto;
+}
+
+/* Right half: Vega Chart */
+.right-half {
+    flex: 1;
+    padding: 10px;
+    max-width: 50%;
+}
+
+/* Table container styling */
+.table-container {
+    width: 100%;
+    max-height: 500px;
+    /* Adjust height as needed */
+    overflow-y: auto;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Styling for the table */
+#sortable-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+#sortable-table th,
+#sortable-table td {
+    padding: 8px;
+    border: 1px solid #ddd;
+}
+
+#sortable-table th {
+    cursor: pointer;
+    background-color: #f4f4f4;
 }

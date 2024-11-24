@@ -10,99 +10,139 @@
     <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
     <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
     <script data-goatcounter="https://drtc.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+
 </head>
 
 <body>
-    <div class="container">
-        <header>
-            <h1>Fairness im maschinellen Lernen</h1>
-            <nav>
-                <ul>
-                    <li><a href="#section1">Introduction</a></li>
-                    <li><a href="#chart">Chart</a></li>
-                    <li><a href="#section2">Details</a></li>
-                    <li><a href="#section3">Contact</a></li>
-                    <li><a href="https://github.com/thomascamminady/fairness-im-maschinellen-lernen"> Repository</a>
-                    </li>
-                </ul>
-            </nav>
-        </header>
+    <header>
+        <h1>Fairness im maschinellen Lernen</h1>
+        <nav>
+            <ul>
+                <li><a href="#section1">Introduction</a></li>
+                <li><a href="#chart">Chart</a></li>
+                <li><a href="#section2">Details</a></li>
+                <li><a href="#section3">Contact</a></li>
+                <li><a href="https://github.com/thomascamminady/fairness-im-maschinellen-lernen">Repository</a></li>
+            </ul>
+        </nav>
+    </header>
 
-        <main>
-            <section id="section1">
-                <h2>Introduction</h2>
-                <p>
-                    Heavily inspired by https://research.google.com/bigpicture/attacking-discrimination-in-ml/
-                </p>
-                <p>
-                    Donec vitae felis id odio viverra scelerisque. Maecenas at augue ullamcorper, dignissim mi sed,
-                    tincidunt quam. Suspendisse vitae elit nec mi luctus dignissim sit amet ut purus. Cras id erat
-                    vitae risus tincidunt ultricies eget vel justo.
-                </p>
-                <p>
-                    Donec vitae felis id odio viverra scelerisque. Maecenas at augue ullamcorper, dignissim mi sed,
-                    tincidunt quam. Suspendisse vitae elit nec mi luctus dignissim sit amet ut purus. Cras id erat
-                    vitae risus tincidunt ultricies eget vel justo.
-                </p>
-                <p>
-                    Donec vitae felis id odio viverra scelerisque. Maecenas at augue ullamcorper, dignissim mi sed,
-                    tincidunt quam. Suspendisse vitae elit nec mi luctus dignissim sit amet ut purus. Cras id erat
-                    vitae risus tincidunt ultricies eget vel justo.
-                </p>
-            </section>
-        </main>
-    </div>
+    <main>
+        <section id="intro">
+            <h2>Einleitung</h2>
+            <p>
+                Siehe auch: https://research.google.com/bigpicture/attacking-discrimination-in-ml/
+            </p>
+            <p>
+                Styling erst einmal ignorieren.
+            </p>
+        </section>
 
-    <div id="chart-container">
+        <section id="section1">
+            <h2>Vierfeldertafel</h2>
+            <div class="content">
+                <div class="text">
+                    <p>Eine Bank vergibt Kredite von 1000€.</p>
+                    <p>Manche Menschen bekommen einen Kredit, manche nicht.</p>
+                    <p>Manche Menschen zahlen den Kredit zurück, manche nicht.</p>
+                    <p>Wenn man zurück zahlt, zahlt man 1100€ zurück. Das ist inklusive 10% Zinsen.</p>
+                    <p>Wenn nicht zurück gezahlt wird, verliert die Bank 1000€.</p>
+                    <p>Hier ist eine Vierfeldertafel.</p>
+                </div>
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th></th>
+                                <th>Kredit genehmigt</th>
+                                <th>Kredit abgelehnt</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>Zahlt zurück</th>
+                                <td contenteditable="true"></td>
+                                <td contenteditable="true"></td>
+                            </tr>
+                            <tr>
+                                <th>Zahlt nicht zurück</th>
+                                <td contenteditable="true"></td>
+                                <td contenteditable="true"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+
+
+
+        <section id="user-table">
+            <h2>User Table and Chart</h2>
+            <div class="split-container">
+                <!-- Left Half: User Table -->
+                <div class="left-half">
+                    <div class="table-container">
+                        <table id="sortable-table">
+                            <thead>
+                                <tr>
+                                    <th onclick="sortTable(0)">Name</th>
+                                    <th onclick="sortTable(1)">Score</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- Data will be populated dynamically -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Right Half: Vega Chart -->
+                <div class="right-half">
+                    <div id="simplehist-container"></div>
+                </div>
+            </div>
+        </section>
+        <script src="script.js"></script>
+        <script>
+            // Embed the Vega chart on the right half
+            vegaEmbed("#simplehist-container", "vega/simplehist.json", { renderer: "canvas", actions: false }).catch(console.error);
+        </script>
+
+        <section id="distribution">
+            <h2>Verteilungen</h2>
+            <p>
+                Manche Menschen haben einen guten Score, zahlen aber nicht zurück.
+
+            </p>
+            <p>
+                Manche Menschen haben einen schlechten Score, zahlen aber zurück.
+            </p>
+
+            <p>
+                Rot = Zahlt nicht zurück.
+            </p>
+            <p>
+                Blau = Zahlt zurück.
+            </p>
+            <div id="chart-container2"></div>
+            <script>
+                vegaEmbed("#chart-container2", "vega/hist.json", { renderer: "canvas", actions: false }).catch(console.error);
+            </script>
+        </section>
+
+
         <section id="chart">
             <h2>Data Chart</h2>
-            <div id="chart"></div>
+            <div id="chart-container"></div>
+            <script>
+                vegaEmbed("#chart-container", "vega/chart.json", { renderer: "canvas", actions: false }).catch(console.error);
+            </script>
         </section>
-    </div>
-
-    <div class="container">
-        <main>
-            <section id="section2">
-                <h2>Details</h2>
-                <p>
-                    Donec vitae felis id odio viverra scelerisque. Maecenas at augue ullamcorper, dignissim mi sed,
-                    tincidunt quam. Suspendisse vitae elit nec mi luctus dignissim sit amet ut purus. Cras id erat
-                    vitae risus tincidunt ultricies eget vel justo.
-                </p>
-                <p>
-                    Donec vitae felis id odio viverra scelerisque. Maecenas at augue ullamcorper, dignissim mi sed,
-                    tincidunt quam. Suspendisse vitae elit nec mi luctus dignissim sit amet ut purus. Cras id erat
-                    vitae risus tincidunt ultricies eget vel justo.
-                </p>
-                <p>
-                    Donec vitae felis id odio viverra scelerisque. Maecenas at augue ullamcorper, dignissim mi sed,
-                    tincidunt quam. Suspendisse vitae elit nec mi luctus dignissim sit amet ut purus. Cras id erat
-                    vitae risus tincidunt ultricies eget vel justo.
-                </p>
-
-            </section>
-
-            <section id="section3">
-                <h2>Contact</h2>
-                <p>
-                    Nullam non nibh vitae erat vehicula tincidunt in vel nulla. Integer vulputate lorem sed ultricies
-                    fermentum. Phasellus interdum velit ac felis commodo, sit amet iaculis purus fermentum.
-                </p>
-                <address>
-                    Email: <a href="mailto:example@example.com">example@example.com</a><br>
-                    Phone: +123-456-7890
-                </address>
-            </section>
-        </main>
-
-        <footer>
-            <p>A footer comes here.</p>
-        </footer>
-    </div>
-
-    <script>
-        vegaEmbed("#chart", "vega/chart.json", { renderer: "canvas", actions: false }).catch(console.error);
-    </script>
+    </main>
 </body>
+
+
 
 </html>

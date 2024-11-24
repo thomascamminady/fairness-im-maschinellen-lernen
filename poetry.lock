@@ -1588,6 +1588,16 @@ files = [
 cffi = {version = "*", markers = "implementation_name == \"pypy\""}
 
 [[package]]
+name = "randomuser"
+version = "1.6"
+description = "Python class for generating random user data using https://randomuser.me API"
+optional = false
+python-versions = "*"
+files = [
+    {file = "randomuser-1.6.tar.gz", hash = "sha256:fe50090b0397ce138efdad97b132fb934a6a7afea314537786778210bdf2531e"},
+]
+
+[[package]]
 name = "referencing"
 version = "0.35.1"
 description = "JSON Referencing + Python"
@@ -2043,4 +2053,4 @@ files = [
 [metadata]
 lock-version = "2.0"
 python-versions = "3.11.*"
-content-hash = "f52932a971c8e3d757675887caf1d79308465c7a5762d0fab7b6eb8e8a70e05d"
+content-hash = "4be9eac803527b931862f342b42c27ed1d30a0a6d9bc0f020fb02590efb02179"
